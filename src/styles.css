@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* app-specific */
+body { @apply bg-gray-50 text-gray-800; }
+.card { @apply bg-white shadow rounded-lg p-4; }
