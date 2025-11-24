@@ -1,1 +1,23 @@
-<p>events works!</p>
+<div class="space-y-6">
+  <h1 class="text-2xl font-bold text-gray-800">Events Calendar</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" [@listAnimation]="events.length">
+    <div *ngFor="let event of events" [@cardAnimation] class="bg-white rounded-xl shadow-sm p-6 space-y-3 hover:shadow-md transition-shadow">
+      <div class="flex justify-between items-start">
+        <h2 class="text-lg font-semibold text-gray-800">{{ event.name }}</h2>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full" [ngClass]="getStatusClass(event.status)">
+          {{ event.status }}
+        </span>
+      </div>
+      <p class="text-gray-600 text-sm">{{ event.type }} - {{ event.location }}</p>
+      <div class="flex items-center text-gray-500 text-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+        <span>{{ event.date | date:'longDate' }}</span>
+      </div>
+      <div class="flex justify-end space-x-2 pt-2 border-t border-gray-100 mt-4">
+        <button class="text-sm text-brand-purple hover:underline">Details</button>
+        <button class="text-sm text-red-600 hover:underline">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
