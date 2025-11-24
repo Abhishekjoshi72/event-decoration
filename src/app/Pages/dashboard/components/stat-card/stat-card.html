@@ -1,0 +1,11 @@
+<div class="bg-white rounded-xl shadow-sm p-5 border-b-4 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1" [ngClass]="borderColorClass">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-gray-500 uppercase tracking-wider">{{ title }}</p>
+          <h4 class="text-2xl font-bold text-gray-800 mt-1">{{ value }}</h4>
+        </div>
+        <div class="p-3 rounded-full" [ngClass]="iconBgClass">
+           <ng-content></ng-content>
+        </div>
+      </div>
+    </div>

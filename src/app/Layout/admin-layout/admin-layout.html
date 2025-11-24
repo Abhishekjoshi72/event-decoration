@@ -1,0 +1,12 @@
+<div class="flex h-screen overflow-hidden bg-gray-100">
+    <app-sidebar class="flex-shrink-0"></app-sidebar>
+
+    <div class="flex-1 flex flex-col overflow-hidden">
+        <app-header></app-header>
+
+        <main class="flex-1 overflow-x-hidden overflow-y-auto p-6" 
+              [@fadeAnimation]="prepareRoute(outlet)">
+            <router-outlet #outlet="outlet"></router-outlet>
+        </main>
+    </div>
+</div>

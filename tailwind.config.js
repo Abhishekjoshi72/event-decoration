@@ -19,6 +19,11 @@ module.exports = {
       animation: {
         float: 'float 4s ease-in-out infinite',
         glow: 'glow 1.5s ease-in-out infinite'
+      },
+      colors: {
+        // Custom brand colors for event theme
+        'brand-purple': '#6b46c1',
+        'brand-light': '#f3f0ff',
       }
     },
   },
